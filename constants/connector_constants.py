@@ -1,5 +1,6 @@
 # ADLS storage location folder
-from utils.connection import get_secret
+
+from utils import connection
 
 mount_point = "/mnt/processing-rcb-working/"
 
@@ -29,7 +30,7 @@ def wenco_properties():
 # RCB database constants
 # TODO: Remove the user data from the constants
 # TODO: Find a better way to provide credentials
-rcb_user = get_secret("rcb-sql-database-user", "processing-rcb-aa-scope")
+rcb_user = connection.get_secret("rcb-sql-database-user", "processing-rcb-aa-scope")
 rcb_secret = get_secret("rcb-sql-database-secret", "processing-rcb-aa-scope")
 rcb_hostname = get_secret("rcb-sql-server-host", "processing-rcb-aa-scope")
 rcb_database = get_secret("rcb-sql-database", "processing-rcb-aa-scope")

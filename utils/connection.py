@@ -4,7 +4,7 @@
 # NOTE: dbutils and spark packages are solely from DataBricks and thus will
 # not work without connection to the cluster
 
-from constants import connector_constants
+import constants.connector_constants
 
 
 def get_widget_argument(arg):
